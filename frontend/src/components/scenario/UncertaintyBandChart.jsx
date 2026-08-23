@@ -1,0 +1,1 @@
+export default function UncertaintyBandChart({cascade}){return <div className="panel"><p className="eyebrow">PRICE IMPACT RANGE</p><div className="band"><span>+{Math.round(cascade.priceImpactPct*70)}%</span><i style={{left:'25%',width:'55%'}}/><span>+{Math.round(cascade.priceImpactPct*130)}%</span></div><small>80% confidence interval · scenario model</small></div>}

@@ -1,0 +1,73 @@
+.draw-chart {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 4px;
+}
+
+.draw-axis {
+  height: 102px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px 0 15px;
+  color: #7f98b3;
+  font: 9px 'DM Mono', monospace;
+  white-space: nowrap;
+}
+
+.draw .draw-bars {
+  height: 102px;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  padding: 5px 5px 15px;
+  border-left: 1px solid #294863;
+  border-bottom: 1px solid #294863;
+  background: linear-gradient(to bottom, #20364e 1px, transparent 1px 50%, #20364e 50%, transparent calc(50% + 1px));
+}
+
+.draw .draw-bars div {
+  height: 100%;
+  flex: 1;
+  min-width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+}
+
+.draw .draw-bars b {
+  height: 10px;
+  color: #b9d8ee;
+  font: 9px 'DM Mono', monospace;
+  font-weight: 400;
+}
+
+.draw .draw-bars i {
+  width: 100%;
+  background: linear-gradient(#38bdf8, #1d6fa4);
+  border-radius: 3px 3px 0 0;
+}
+
+.draw .draw-bars span {
+  font-size: 9px;
+  color: #7089a2;
+}
+
+@media (max-width: 640px) {
+  .draw-chart {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .draw .draw-bars {
+    gap: 6px;
+  }
+
+  .draw .draw-bars b {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,18 @@
+# Secrets -- never commit real credentials
+backend/.env
+frontend/.env
+.env
+.env.local
+
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.venv/
+*.pyc
+
+# Node / frontend build
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store

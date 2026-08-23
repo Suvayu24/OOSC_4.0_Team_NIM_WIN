@@ -1,0 +1,1 @@
+export default function ReserveGauge({reserve}){return <div className="panel gauge"><p className="eyebrow">STRATEGIC RESERVES</p><div className="ring" style={{'--fill':`${reserve.covered}%`}}><b>{reserve.current}</b><span>days cover</span></div><p>Safety floor: <b>{reserve.safety} days</b></p><strong>{reserve.covered}% supply gap covered</strong></div>}

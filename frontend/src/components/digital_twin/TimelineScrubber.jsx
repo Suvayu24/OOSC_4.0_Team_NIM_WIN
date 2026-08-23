@@ -1,0 +1,1 @@
+export default function TimelineScrubber({timeline,day,setDay}){return <div className="timeline"><div><span>IMPACT TIMELINE</span><b>Day {day} of 7</b></div><input type="range" min="1" max="7" value={day} onChange={e=>setDay(+e.target.value)}/><div className="bars">{timeline.map((v,i)=><i key={i} style={{height:`${v*35}px`}} className={i+1===day?'chosen':''}/>)}</div></div>}

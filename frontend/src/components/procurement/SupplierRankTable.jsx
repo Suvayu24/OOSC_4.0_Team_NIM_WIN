@@ -1,0 +1,4 @@
+import { money, pct } from '../../utils/formatters';
+export default function SupplierRankTable({ rows = [], onSelect, selectedId, loading }) {
+  return <div className="panel"><p className="eyebrow">ADAPTIVE PROCUREMENT · TOP ALTERNATES</p><table><thead><tr><th>Route</th><th>Risk</th><th>Cost / bbl</th><th>ETA</th><th>Spare capacity</th></tr></thead><tbody>{rows.map((row, i) => <tr key={row.id} className={selectedId === row.id ? 'selected-row' : ''} onClick={() => onSelect?.(row)}><td><b>#{i + 1}</b> {row.name}</td><td className={row.risk > .45 ? 'warn' : 'good'}>{pct(row.risk)}</td><td>{money(row.cost)}</td><td>{row.etaDays}d</td><td>{row.capacityLabel}</td></tr>)}</tbody></table>{!rows.length && <p className="muted">No viable alternates returned for this disruption.</p>}{loading && <p className="muted">Generating reserve plan…</p>}</div>;
+}

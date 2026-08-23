@@ -1,0 +1,1 @@
+export default function Header({tab,setTab}) { return <header><div className="brand"><span>◈</span> OIL RISK <b>COMMAND CENTER</b></div><nav>{[['live','Live Map'],['simulation','Simulation']].map(([id,label])=><button key={id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</nav><div className="live"><i/> Live intelligence</div></header>; }

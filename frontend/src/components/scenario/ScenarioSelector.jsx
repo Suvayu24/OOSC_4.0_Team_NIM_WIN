@@ -1,0 +1,3 @@
+export default function ScenarioSelector({ routes = [], route, setRoute, duration, setDuration, onRun, loading }) {
+  return <div className="panel selector"><p className="eyebrow">HYPOTHETICAL DISRUPTION</p><label>Close corridor<select value={route?.id || ''} onChange={(e) => setRoute(e.target.value)}>{routes.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label><label>Planning horizon <output>{duration} days</output><input type="range" min="3" max="30" value={duration} onChange={(e) => setDuration(+e.target.value)}/></label><button className="primary" onClick={onRun} disabled={loading || !route}>{loading ? 'Running model…' : 'Close route & rank alternates'}</button></div>;
+}
